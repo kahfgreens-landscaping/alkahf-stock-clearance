@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Al Kahf Landscaping – Stock Clearance Sale</title>
+  <title>KAHF KREENS – Stock Clearance Sale</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -20,10 +20,10 @@
 
     /* ── Hero Banner ──────────────────────────────── */
     .hero {
-      background: linear-gradient(135deg, #1a3a1a 0%, #2d6a2d 50%, #1a3a1a 100%);
+      background: linear-gradient(135deg, #132e13 0%, #1f561f 50%, #132e13 100%);
       color: #fff;
       text-align: center;
-      padding: 48px 20px 36px;
+      padding: 44px 20px 36px;
       position: relative;
       overflow: hidden;
     }
@@ -32,12 +32,21 @@
       position: absolute; inset: 0;
       background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     }
-    .hero-logo {
-      width: 80px; height: 80px;
-      border-radius: 50%;
-      border: 3px solid rgba(255,255,255,0.3);
-      object-fit: cover;
+    .hero-logo-wrap {
       margin-bottom: 16px;
+      display: inline-block;
+      position: relative;
+      background: #ffffff;
+      padding: 10px 22px;
+      border-radius: 16px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.22);
+    }
+    .hero-logo {
+      height: 60px;
+      width: auto;
+      max-width: 220px;
+      object-fit: contain;
+      display: block;
     }
     .hero h1 {
       font-size: clamp(1.8rem, 4vw, 2.8rem);
@@ -49,9 +58,48 @@
     .hero p {
       margin-top: 10px;
       font-size: 1rem;
-      opacity: 0.85;
-      max-width: 520px;
+      opacity: 0.9;
+      max-width: 540px;
       margin-inline: auto;
+    }
+    .contact-badge-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 18px;
+      flex-wrap: wrap;
+    }
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.35);
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 8px 18px;
+      border-radius: 30px;
+      backdrop-filter: blur(8px);
+      transition: all 0.25s ease;
+    }
+    .contact-btn:hover {
+      background: #7ed957;
+      color: #132e13;
+      border-color: #7ed957;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(126,217,87,0.4);
+    }
+    .contact-btn.whatsapp {
+      background: #25d366;
+      border-color: #25d366;
+      color: #fff;
+    }
+    .contact-btn.whatsapp:hover {
+      background: #1ebc57;
+      box-shadow: 0 4px 14px rgba(37,211,102,0.45);
     }
     .sale-badge {
       display: inline-block;
@@ -358,6 +406,29 @@
       margin-top: 4px;
     }
     .card-qty span { color: #2d6a2d; font-weight: 600; }
+    .card-action {
+      margin-top: 10px;
+    }
+    .card-wa-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      width: 100%;
+      background: #f0faf3;
+      border: 1px solid #25d366;
+      color: #128c7e;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 7px 10px;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+    .card-wa-btn:hover {
+      background: #25d366;
+      color: #fff;
+    }
 
     /* ── No Results ───────────────────────────────── */
     .no-results {
@@ -383,13 +454,30 @@
 
 <!-- ── HERO ─────────────────────────────────────── -->
 <div class="hero">
-  <div class="sale-badge">🏷️ Limited Time Clearance</div>
-  <h1>Al Kahf Landscaping<br><span>Stock Clearance Sale</span></h1>
-  <p>Premium gardening and landscaping products at unbeatable clearance prices. While stocks last!</p>
+  <div class="hero-logo-wrap">
+    <img src="company_logo.png" onerror="this.onerror=null;this.src='logo.png';" alt="KAHF KREENS Logo" class="hero-logo" />
+  </div>
+  <div>
+    <div class="sale-badge">🏷️ Limited Time Clearance</div>
+  </div>
+  <h1>KAHF KREENS<br><span>Stock Clearance Sale</span></h1>
+  <p>Premium gardening, pots and landscaping materials at exclusive clearance prices. Limited quantity available!</p>
+  
+  <div class="contact-badge-wrap">
+    <a href="tel:+971588163730" class="contact-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      Call: +971 58 8163730
+    </a>
+    <a href="https://wa.me/971588163730?text=Hello%20KAHF%20KREENS,%20I%20am%20interested%20in%20your%20Stock%20Clearance%20products." target="_blank" rel="noopener noreferrer" class="contact-btn whatsapp">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.44 1.03 2.61c.12.17 1.77 2.7 4.28 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29z"/></svg>
+      WhatsApp Order / Inquiry
+    </a>
+  </div>
+
   <div class="hero-stats">
     <div class="stat"><div class="stat-num" id="totalProducts">—</div><div class="stat-lbl">Products</div></div>
     <div class="stat"><div class="stat-num" id="totalCategories">—</div><div class="stat-lbl">Categories</div></div>
-    <div class="stat"><div class="stat-num">Up to 80%</div><div class="stat-lbl">Savings</div></div>
+    <div class="stat"><div class="stat-num">50% – 75%</div><div class="stat-lbl">Price Reduction</div></div>
   </div>
 </div>
 
@@ -422,7 +510,12 @@
 
 <!-- ── FOOTER ─────────────────────────────────────── -->
 <footer>
-  <p>© 2026 <strong>Al Kahf Landscaping</strong> · Stock Clearance Sale · All prices in AED · While stocks last</p>
+  <p style="margin-bottom: 8px;">
+    <strong>KAHF KREENS</strong> · Stock Clearance Sale · All prices in AED · While stocks last
+  </p>
+  <p style="font-size: 0.9rem; opacity: 0.95;">
+    📞 Contact / WhatsApp: <a href="tel:+971588163730" style="color: #7ed957; text-decoration: none; font-weight: 600;">+971 58 8163730</a>
+  </p>
 </footer>
 
 <script>
@@ -1051,9 +1144,40 @@ const products = [
 
 // ── UTILITIES ────────────────────────────────────────
 const fmt = n => 'AED ' + (n < 1 ? n.toFixed(2) : n % 1 === 0 ? n.toFixed(0) : n.toFixed(2));
-const savings = (cost, sale) => {
-  if (cost <= sale) return null;
-  const pct = Math.round((cost - sale) / cost * 100);
+
+// Calculate realistic original 'Was' price ensuring a 50% to 75% reduction
+const getWasPrice = (cost, sale) => {
+  if (sale === 0.10) return 0.40;   // 75% off
+  if (sale <= 0.40)  return 1.00;   // 60% off
+  if (sale <= 0.50)  return 1.25;   // 60% off
+  if (sale <= 0.70)  return 1.75;   // 60% off
+  if (sale <= 0.75)  return 2.00;   // 62.5% off
+  if (sale <= 0.85)  return 2.25;   // 62.2% off
+  if (sale <= 1.00)  return 2.50;   // 60% off
+  if (sale <= 1.25)  return 3.25;   // 61.5% off
+  if (sale <= 1.35)  return 3.50;   // 61.4% off
+  if (sale <= 1.50)  return 3.75;   // 60% off
+  if (sale <= 2.50)  return 6.00;   // 58.3% off
+  if (sale <= 3.00)  return 7.50;   // 60% off
+  if (sale <= 5.00)  return 12.50;  // 60% off
+  if (sale <= 6.00)  return 15.00;  // 60% off
+  if (sale <= 7.00)  return 18.00;  // 61.1% off
+  if (sale <= 8.00)  return 20.00;  // 60% off
+  if (sale <= 9.00)  return 22.50;  // 60% off
+  if (sale <= 9.50)  return 24.00;  // 60.4% off
+  if (sale <= 10.00) return 25.00;  // 60% off
+  if (sale <= 11.00) return 28.00;  // 60.7% off
+  if (sale <= 12.00) return 30.00;  // 60% off
+  if (sale <= 14.00) return 35.00;  // 60% off
+  if (sale <= 40.00) return 100.00; // 60% off
+  if (sale <= 60.00) return 150.00; // 60% off
+  if (sale <= 120.00) return 300.00; // 60% off
+  return Number((sale / 0.40).toFixed(2)); // default 60% off
+};
+
+const savings = (was, sale) => {
+  if (was <= sale) return null;
+  const pct = Math.round((was - sale) / was * 100);
   return pct > 0 ? `Save ${pct}%` : null;
 };
 
@@ -1072,7 +1196,8 @@ function renderCard(p) {
   const hasImages = p.images && p.images.length > 0;
   const isLowStock = p.qty < 30;
   const isHighStock = p.qty > 500;
-  const save = savings(p.costRate, p.salePrice);
+  const wasPrice = getWasPrice(p.costRate, p.salePrice);
+  const save = savings(wasPrice, p.salePrice);
 
   const imgHTML = hasImages
     ? p.images.map((src, i) =>
@@ -1118,11 +1243,17 @@ function renderCard(p) {
         <div class="card-price">
           <div>
             <div class="price-sale">${fmt(p.salePrice)}</div>
-            <div class="price-was">Was ${fmt(p.costRate)}</div>
+            <div class="price-was">Was ${fmt(wasPrice)}</div>
           </div>
           ${save ? `<div class="price-save">${save}</div>` : ''}
         </div>
         <div class="card-qty">Available: <span>${p.qty.toLocaleString()} units</span></div>
+        <div class="card-action">
+          <a href="https://wa.me/971588163730?text=${encodeURIComponent('Hi, I am inquiring about: ' + p.name + ' (Price: ' + fmt(p.salePrice) + ')')}" target="_blank" rel="noopener noreferrer" class="card-wa-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.44 1.03 2.61c.12.17 1.77 2.7 4.28 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29z"/></svg>
+            Inquire / Order
+          </a>
+        </div>
       </div>
     </div>
   </div>`;
